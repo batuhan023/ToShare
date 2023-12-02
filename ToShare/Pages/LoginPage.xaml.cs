@@ -1,0 +1,32 @@
+using Android.Content.Res;
+using ToShare.Services;
+
+namespace ToShare.Pages;
+
+public partial class LoginPage : ContentPage
+{
+    private readonly LoginService _loginService = new LoginService();
+	public LoginPage()
+	{
+		InitializeComponent();
+	}
+
+    async void BtnLogin_Clicked(object sender, EventArgs e)
+    {
+        //var response = await _loginService.Login(EntEmail.Text, EntPassword.Text);
+        // if (response != null)
+        // {
+        //     Application.Current.MainPage = new HomePage();
+        // }
+        // else
+        // {
+        //     await DisplayAlert("", "Oops something went wrong", "Cancel");
+        // }
+        await Navigation.PushModalAsync(new HomePage());
+    }
+
+    async void TapJoinNow_Tapped(object sender, EventArgs e)
+    {
+        await Navigation.PushModalAsync(new RegisterPage());
+    }
+}
