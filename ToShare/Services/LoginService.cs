@@ -11,7 +11,7 @@ namespace ToShare.Services
 {
     public class LoginService
     {
-        private const string ApiUrl = "https://192.168.1.114:45456/api/";
+        private const string ApiUrl = "https://192.168.1.138:45458/api/";
 
         private readonly HttpClient _httpClient;
 
@@ -32,6 +32,16 @@ namespace ToShare.Services
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
                 var data = JsonConvert.DeserializeObject<List<User>>(jsonString);
+                
+                if(data != null && data.Count>0) 
+                {
+                    var user = data[0];
+                    Preferences.Set("username", user.UserName);
+                    Preferences.Set("userid", user.Id);
+                    return user;
+                  
+                }
+
                 return data.FirstOrDefault();
             }
             else

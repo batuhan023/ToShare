@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="ToShare.Pages.CustomTabbedPage"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            xmlns:local="clr-namespace:ToShare.Pages"
+            SelectedTabColor="#1d94ab"
+            UnselectedTabColor="#78909c">
+    <local:HomePage Title="Home" IconImageSource="home2.png"/>
+    <local:AppliesPage Title="Applies" IconImageSource="apply.png" />
+    <local:SettingsPage Title="Settings" IconImageSource="setting2.png"/>
+</TabbedPage>

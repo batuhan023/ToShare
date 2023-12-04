@@ -9,13 +9,13 @@ public partial class RegisterPage : ContentPage
 
     async void BtnRegister_Clicked(object sender, EventArgs e)
     {
-		await Navigation.PushModalAsync(new LoginPage());
+        await Navigation.PushAsync(new LoginPage());
 
     }
 
     async void TapLogin_Tapped(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new LoginPage());
+        await Navigation.PushAsync(new LoginPage());
 
     }
 }

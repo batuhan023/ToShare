@@ -49,7 +49,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\apply.png" />
 	  <None Remove="Resources\Images\hello.png" />
+	  <None Remove="Resources\Images\home.gif" />
+	  <None Remove="Resources\Images\home2.png" />
+	  <None Remove="Resources\Images\search.png" />
+	  <None Remove="Resources\Images\setting.gif" />
+	  <None Remove="Resources\Images\setting2.png" />
 	  <None Remove="Resources\Images\undraw_sign_up.svg" />
 	</ItemGroup>
 
@@ -59,6 +65,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Pages\CustomTabbedPage.xaml.cs">
+	    <DependentUpon>CustomTabbedPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\AppliesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -66,6 +81,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\RegisterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\CustomTabbedPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
