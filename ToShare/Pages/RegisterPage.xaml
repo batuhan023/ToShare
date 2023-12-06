@@ -1,9 +1,125 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ToShare.Pages.RegisterPage"
-             Title="RegisterPage">
-    <VerticalStackLayout VerticalOptions="Center"
+             x:Class="ToShare.Pages.RegisterPage" NavigationPage.HasNavigationBar="False">
+
+
+    <VerticalStackLayout Spacing="0"
+                         Padding="20,0">
+
+        <Grid Margin="0,20,0,0" ColumnSpacing="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Hey, Join Us!"
+                   FontSize="16"
+                   Grid.Column="0"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Image Grid.Column="1"
+                   Source="signup.svg"
+                   HeightRequest="250"
+                   WidthRequest="250"/>
+        </Grid>
+
+        <VerticalStackLayout VerticalOptions="Center"
+                             Margin="40,0">
+            <Label Text="Please enter your information below to create a new account for using app."
+                   FontSize="Small"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,20"/>
+            <Frame CornerRadius="10"
+                   Padding="3"
+                   HasShadow="True"
+                   HeightRequest="50"
+                   Margin="0,0,0,4">
+                <Entry Placeholder="Name"
+                       Margin="5,0"
+                       x:Name="EntName"
+                       PlaceholderColor="Black"
+                       VerticalOptions="Center"
+                       FontSize="13.5"
+                       TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10"
+                   Padding="3"
+                   HasShadow="True"
+                   HeightRequest="50"
+                   Margin="0,4">
+                <Entry x:Name="EntSurname"
+                       Placeholder="Surname"
+                       PlaceholderColor="Black"
+                       VerticalOptions="Center"
+                       FontSize="13.5"
+                       TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10"
+                   Padding="3"
+                   HasShadow="True"
+                   HeightRequest="50"
+                   Margin="0,4">
+                <Entry Placeholder="Email"
+                       x:Name="EntEmail"
+                       PlaceholderColor="Black"
+                       VerticalOptions="Center"
+                       FontSize="13.5"
+                       TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10"
+                   Padding="3"
+                   HasShadow="True"
+                   HeightRequest="50"
+                   Margin="0,4">
+                <Entry Placeholder="Phone Number"
+                       x:Name="EntPhone"
+                       PlaceholderColor="Black"
+                       VerticalOptions="Center"
+                       FontSize="12"
+                       TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10"
+                   Padding="3"
+                   HasShadow="True"
+                   HeightRequest="50"
+                   Margin="0,4">
+                <Entry Placeholder="Password"
+                       x:Name="EntPassword"
+                       PlaceholderColor="Black"
+                       VerticalOptions="Center"
+                       FontSize="12"
+                       TextColor="Black"/>
+            </Frame>
+
+            <Button x:Name="BtnRegister"
+                    Text="Register Now"
+                    Margin="0,15,0,5"
+                    WidthRequest="180"
+                    HeightRequest="50"
+                    FontSize="Small"
+                    BackgroundColor="#00B0FF"
+                    Clicked="BtnRegister_Clicked"/>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Already have an account?"
+                       FontSize="16"
+                       TextColor="Black"/>
+                <Label Text="Sign In"
+                       FontSize="16"
+                       TextColor="#00B0FF"
+                       Margin="5,0"/>
+                <HorizontalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapLogin" Tapped="TapLogin_Tapped"/>
+                </HorizontalStackLayout.GestureRecognizers>
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+        
+    </VerticalStackLayout>
+    
+    
+    <!--<VerticalStackLayout VerticalOptions="Center"
                          Margin="40,0"
                          Spacing="20">
         <Image Source="hello.png"
@@ -11,11 +127,11 @@
                HeightRequest="150"
                WidthRequest="150"/>
         <Label Text="Hi! Join Us"
-               TextColor="Black"
+               TextColor="#333333"
                FontSize="Large"
                HorizontalOptions="Center"/>
         <Label Text="Please enter your information below to create a new account for using app."
-               TextColor="Black"
+               TextColor="#666666"
                FontSize="Small"
                HorizontalOptions="Center"/>
         <Entry x:Name="EntName"
@@ -48,5 +164,5 @@
                 <TapGestureRecognizer x:Name="TapLogin" Tapped="TapLogin_Tapped"/>
             </HorizontalStackLayout.GestureRecognizers>
         </HorizontalStackLayout>
-    </VerticalStackLayout>
+    </VerticalStackLayout>-->
 </ContentPage>

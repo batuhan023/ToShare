@@ -56,6 +56,8 @@
 	  <None Remove="Resources\Images\search.png" />
 	  <None Remove="Resources\Images\setting.gif" />
 	  <None Remove="Resources\Images\setting2.png" />
+	  <None Remove="Resources\Images\signin.svg" />
+	  <None Remove="Resources\Images\signup.svg" />
 	  <None Remove="Resources\Images\undraw_sign_up.svg" />
 	</ItemGroup>
 

@@ -11,7 +11,7 @@ namespace ToShare.Services
 {
     public class LoginService
     {
-        private const string ApiUrl = "https://192.168.1.138:45458/api/";
+        private const string ApiUrl = "https://192.168.1.104:45457/api/";
 
         private readonly HttpClient _httpClient;
 
