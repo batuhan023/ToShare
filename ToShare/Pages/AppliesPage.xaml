@@ -2,10 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToShare.Pages.AppliesPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <ScrollView>
+        <CollectionView x:Name="CvProperties"
+                    Margin="10"
+                    SelectionMode="Single">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="20" Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0"
+                               BorderColor="#00B0FF"
+                               CornerRadius="25"
+                               Margin="10,0"
+                               Padding="5"
+                               IsClippedToBounds="True">
+                            <Image HeightRequest="140"
+                                   
+                                   Aspect="Fill"
+                                   Source="{Binding Image}"/>
+                        </Frame>
+                        <Frame Grid.Column="1"
+                               BorderColor="#00B0FF"                             
+                               CornerRadius="25">
+                            <StackLayout Padding="15" Spacing="10">
+                                <HorizontalStackLayout>
+                                    <Label 
+                                          FontSize="Subtitle"
+                                          Text="Count: "/>
+                                    <Label 
+                                          FontSize="Subtitle"
+                                          Text="{Binding Count}"/>
+                                </HorizontalStackLayout>
+                                <Label FontSize="Small" Text="{Binding Name}"/>
+                                <Label FontSize="Small" Text="{Binding Description}"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </ScrollView>
+
 </ContentPage>
