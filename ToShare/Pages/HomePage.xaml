@@ -71,8 +71,9 @@
                 <Label Text="All Products"
                    FontSize="Large"/>
                 <CollectionView x:Name="CvTopPicks"
-                            HeightRequest="350"
+                            HeightRequest="380"
                             SelectionMode="Single"
+                            SelectionChanged="CvTopPicks_SelectionChanged"
                             >
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout ItemSpacing="20" Orientation="Horizontal"/>
@@ -83,8 +84,9 @@
                                    BorderColor="#00B0FF"
                                    Padding="15"
                                    BackgroundColor="White">
-                                <Grid RowSpacing="5">
+                                <Grid RowSpacing="6">
                                     <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
@@ -131,8 +133,20 @@
                                         <Label Grid.Row="4"
                                                FontSize="13"
                                                Text="{Binding Count}"/>
+                                        
                                     </HorizontalStackLayout>
-
+                                    <Button Grid.Row="5"
+                                            Text="Apply"
+                                            WidthRequest="80"
+                                            HeightRequest="40"
+                                            BackgroundColor="#00B0FF"
+                                            TextColor="White"
+                                            FontSize="13"
+                                            Margin="0,0,0,10"
+                                            x:Name="apply_button"
+                                            Clicked="apply_button_Clicked"
+                                            CornerRadius="10"
+                                            />
                                 </Grid>
                             </Frame>
                         </DataTemplate>
