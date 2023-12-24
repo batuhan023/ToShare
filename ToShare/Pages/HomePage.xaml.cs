@@ -74,4 +74,11 @@ public partial class HomePage : ContentPage
         }
     }
 
+    private void CvCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        var currentSelection = e.CurrentSelection.FirstOrDefault() as Category;
+        if(currentSelection== null) return;
+        Navigation.PushAsync(new CategoryPage(currentSelection.Id, currentSelection.Name));
+        ((CollectionView)sender).SelectedItem = null;
+    }
 }

@@ -11,7 +11,7 @@ namespace ToShare.Services
 
     public class PostService
     {
-        private const string ApiUrl = "https://192.168.1.107:45455/api/";
+        private const string ApiUrl = "https://192.168.1.129:45455/api/";
 
         private readonly HttpClient _httpClient;
 
