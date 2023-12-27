@@ -2,10 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToShare.Pages.CategoryPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <CollectionView x:Name="CvCategory"
+                    Margin="10"
+                    SelectionMode="Single">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout ItemSpacing="20" Orientation="Vertical"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Grid.Column="0"
+                           CornerRadius="10"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image HeightRequest="160"
+                                  Aspect="Fill"
+                               Source="{Binding Image}"/>
+                    </Frame>
+                    <StackLayout Grid.Column="1"
+                                 Padding="15"
+                                 Spacing="10">
+                        <Label FontSize="Medium"
+                               Text="{Binding Name}"/>
+                        <Label FontSize="Small"
+                               Text="{Binding Description}"/>
+                        <HorizontalStackLayout>
+                            <Label
+                                   FontSize="13"
+                                   Text="Count: "/>
+                            <Label 
+                                   FontSize="13"
+                                   Text="{Binding Count}"/>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>

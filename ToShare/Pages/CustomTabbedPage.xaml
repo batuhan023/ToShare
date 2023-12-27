@@ -7,7 +7,7 @@
             xmlns:local="clr-namespace:ToShare.Pages"
             SelectedTabColor="#1d94ab"
             UnselectedTabColor="#78909c">
-    <NavigationPage Title="Home" IconImageSource="home2.png">
+    <NavigationPage Title="Home" IconImageSource="home2.png" BarBackgroundColor="#00B0FF">
         <x:Arguments>
             <local:HomePage/>
         </x:Arguments>
