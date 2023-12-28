@@ -4,7 +4,8 @@
              x:Class="ToShare.Pages.CategoryPage">
     <CollectionView x:Name="CvCategory"
                     Margin="10"
-                    SelectionMode="Single">
+                    SelectionMode="Single"
+                    SelectionChanged="CvCategory_SelectionChanged">
         <CollectionView.ItemsLayout>
             <LinearItemsLayout ItemSpacing="20" Orientation="Vertical"/>
         </CollectionView.ItemsLayout>

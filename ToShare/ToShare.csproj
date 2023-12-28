@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\apply.png" />
+	  <None Remove="Resources\Images\backbutton.png" />
 	  <None Remove="Resources\Images\categories.png" />
 	  <None Remove="Resources\Images\hello.png" />
 	  <None Remove="Resources\Images\home.gif" />
@@ -60,6 +61,7 @@
 	  <None Remove="Resources\Images\setting2.png" />
 	  <None Remove="Resources\Images\signin.svg" />
 	  <None Remove="Resources\Images\signup.svg" />
+	  <None Remove="Resources\Images\touchscreen.png" />
 	  <None Remove="Resources\Images\undraw_sign_up.svg" />
 	</ItemGroup>
 
@@ -85,6 +87,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\PostDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\RegisterPage.xaml">

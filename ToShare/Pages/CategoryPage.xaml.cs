@@ -25,4 +25,12 @@ public partial class CategoryPage : ContentPage
 		var category = await _category.GetPostsByCategoryId(categoryId);
         CvCategory.ItemsSource = category;
     }
+
+    private void CvCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        var currentSelection = e.CurrentSelection.FirstOrDefault() as Post;
+        if (currentSelection == null) return;
+        Navigation.PushModalAsync(new PostDetailPage(currentSelection.Id));
+        ((CollectionView)sender).SelectedItem = null;
+    }
 }

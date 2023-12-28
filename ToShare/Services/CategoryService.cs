@@ -24,10 +24,25 @@ namespace ToShare.Services
             _httpClient = new HttpClient(handler);
         }
 
-        public async Task<List<Category>> GetPostsByCategoryId(int id)
+        public async Task<List<Post>> GetPostsByCategoryId(int id)
         {
-            var response = await _httpClient.GetStringAsync($"{ApiUrl}Posts/GetPostsByCategoryId?id={id}");
-            return JsonConvert.DeserializeObject<List<Category>>(response);
+
+            var response = await _httpClient.GetAsync($"{ApiUrl}Posts/GetPostsByCategoryId?categoryId={id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var posts = JsonConvert.DeserializeObject<List<Post>>(content);
+                return posts;
+            }
+            else
+            {
+                // Hata durumunu burada işleyin, örneğin, hata günlüğüne kaydetme veya boş bir liste döndürme
+                return new List<Post>();
+            }
+
+            //var response = await _httpClient.GetStringAsync($"{ApiUrl}Posts/GetPostsByCategoryId?id={id}");
+            //return JsonConvert.DeserializeObject<List<Post>>(response);
         }
 
     }
