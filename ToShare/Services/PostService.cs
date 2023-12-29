@@ -32,6 +32,14 @@ namespace ToShare.Services
         }
 
 
+
+        public async Task<Post> GetPostById(int id)
+        {
+            var response = await _httpClient.GetStringAsync($"{ApiUrl}Posts/GetPostsByPostId?postId={id}");
+            return JsonConvert.DeserializeObject<Post>(response);
+        }
+
+
         public async Task<Apply> ApplyPost(int postId, int userId)
         {
             try

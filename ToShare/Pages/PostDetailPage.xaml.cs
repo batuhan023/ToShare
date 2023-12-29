@@ -11,8 +11,13 @@ public partial class PostDetailPage : ContentPage
 		GetPostDetail(postId);
 	}
 
-    private void GetPostDetail(int postId)
+    private async void GetPostDetail(int postId)
     {
-        _post
+        var post = await _post.GetPostById(postId);
+        lblName.Text = post.Name;
+        lblCount.Text = post.Count.ToString();
+        ImgProperty.Source = post.Image;
+        LblDescription.Text = post.Description;
+
     }
 }

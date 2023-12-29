@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Image Grid.Row="0"
                x:Name="ImgProperty"
-               Source=""
+               
                VerticalOptions="Start"
                Aspect="Fill"
                HeightRequest="280"
@@ -45,7 +45,7 @@
                              Margin="20">
             <Label x:Name="lblCount"
                    FontSize="Subtitle"
-                   Text="300"/>
+                   />
             <HorizontalStackLayout Spacing="5">
                 <Label x:Name="lblName"
                        FontSize="Medium"
@@ -56,7 +56,7 @@
                    FontSize="Title"/>
             <Label x:Name="LblDescription"
                    FontSize="Medium"
-                   Text="dfsdgsg jdfjkdskjs kjflsgfjkl"/>
+                   />
         </VerticalStackLayout>
         <HorizontalStackLayout Grid.Row="4"
                                VerticalOptions="EndAndExpand"
