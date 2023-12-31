@@ -19,7 +19,8 @@ public partial class HomePage : ContentPage
         LblUserName.Text = "Hi " + Preferences.Get("username", string.Empty);
         GetCategories();
 		GetPosts();
-		
+        string userName= Preferences.Get("UserName", string.Empty);
+		LblUserName.Text = userName;
 
 	}
 
@@ -36,12 +37,7 @@ public partial class HomePage : ContentPage
     }
 
 
-    private void CvTopPicks_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        var currentselection = e.CurrentSelection.FirstOrDefault() as Post;
-        if (currentselection == null) return;
-        apply_button_Clicked(currentselection, EventArgs.Empty);
-    }
+    
 
     private async void apply_button_Clicked(object sender, EventArgs e)
     {
@@ -80,5 +76,21 @@ public partial class HomePage : ContentPage
         if(currentSelection== null) return;
         Navigation.PushAsync(new CategoryPage(currentSelection.Id, currentSelection.Name));
         ((CollectionView)sender).SelectedItem = null;
+    }
+
+
+
+    //Bakýlacak
+    private void CvTopPicks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        var currentSelection = e.CurrentSelection.FirstOrDefault() as Post;
+        if (currentSelection == null) return;
+        Navigation.PushModalAsync(new PostDetailPage(currentSelection.Id));
+        ((CollectionView)sender).SelectedItem = null;
+    }
+
+    private void TapSearch_Tapped(object sender, EventArgs e)
+    {
+        Navigation.PushModalAsync(new SearchPage());
     }
 }

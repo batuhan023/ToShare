@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,11 @@ namespace ToShare.Services
         }
 
 
+        public async Task<List<Post>> GetPostsByLetter(string letter)
+        {
+            var response = await _httpClient.GetStringAsync($"{ApiUrl}Posts/SearchPostsByLetter?letter={letter}");
+            return JsonConvert.DeserializeObject<List<Post>>(response);
+        }
 
         public async Task<Post> GetPostById(int id)
         {
@@ -40,7 +46,7 @@ namespace ToShare.Services
         }
 
 
-        public async Task<Apply> ApplyPost(int postId, int userId)
+        public async Task<IActionResult> ApplyPost(int userId, int postId)
         {
             try
             {
@@ -62,7 +68,10 @@ namespace ToShare.Services
                 response.EnsureSuccessStatusCode(); // İsteğin başarılı olup olmadığını kontrol et
 
                 var result = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<Apply>(result);
+                var deserializedResult = JsonConvert.DeserializeObject<Apply>(result);
+
+                return new OkObjectResult(deserializedResult);
+
             }
             catch (Exception ex)
             {

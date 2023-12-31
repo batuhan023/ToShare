@@ -14,17 +14,19 @@ public partial class LoginPage : ContentPage
     async void BtnLogin_Clicked(object sender, EventArgs e)
     {
 
-        Application.Current.MainPage = new CustomTabbedPage();
+        //Application.Current.MainPage = new CustomTabbedPage();
 
-        //var response = await _loginService.Login(EntEmail.Text, EntPassword.Text);
-        //if (response != null)
-        //{
-        //    Application.Current.MainPage = new CustomTabbedPage();
-        //}
-        //else
-        //{
-        //    await DisplayAlert("", "Oops something went wrong", "Cancel");
-        //}
+        var response = await _loginService.Login(EntEmail.Text, EntPassword.Text);
+        if (response != null)
+        {
+            Preferences.Set("UserId", response.Id);
+            Preferences.Set("UserName", response.UserName);
+            Application.Current.MainPage = new CustomTabbedPage();
+        }
+        else
+        {
+            await DisplayAlert("", "Oops something went wrong", "Cancel");
+        }
 
     }
 

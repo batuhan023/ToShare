@@ -29,7 +29,8 @@
                        VerticalOptions="Center"/>
                 </HorizontalStackLayout>
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer />
+                    <TapGestureRecognizer x:Name="TapSearch"
+                                          Tapped="TapSearch_Tapped"/>
                 </Frame.GestureRecognizers>
             </Frame>
 
@@ -73,9 +74,9 @@
                 <Label Text="All Products"
                    FontSize="Large"/>
                 <CollectionView x:Name="CvTopPicks"
-                            HeightRequest="380"
-                            SelectionMode="Single"
-                            SelectionChanged="CvTopPicks_SelectionChanged"
+                                HeightRequest="380"
+                                SelectionMode="Single"
+                                SelectionChanged="CvTopPicks_SelectionChanged"
                             >
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout ItemSpacing="20" Orientation="Horizontal"/>
@@ -135,20 +136,8 @@
                                         <Label Grid.Row="4"
                                                FontSize="13"
                                                Text="{Binding Count}"/>
-                                        
+
                                     </HorizontalStackLayout>
-                                    <Button Grid.Row="5"
-                                            Text="Apply"
-                                            WidthRequest="80"
-                                            HeightRequest="40"
-                                            BackgroundColor="#00B0FF"
-                                            TextColor="White"
-                                            FontSize="13"
-                                            Margin="0,0,0,10"
-                                            x:Name="apply_button"
-                                            Clicked="apply_button_Clicked"
-                                            CornerRadius="10"
-                                            />
                                 </Grid>
                             </Frame>
                         </DataTemplate>
