@@ -30,15 +30,9 @@
                         <Label FontSize="Medium"
                                Text="{Binding Name}"/>
                         <Label FontSize="Small"
-                               Text="{Binding Description}"/>
-                        <HorizontalStackLayout>
-                            <Label
-                                   FontSize="13"
-                                   Text="Count: "/>
-                            <Label 
-                                   FontSize="13"
-                                   Text="{Binding Count}"/>
-                        </HorizontalStackLayout>
+                               Margin="0,15,0,0"
+                               Text="{Binding Adres}"/>
+                        
                     </StackLayout>
                 </Grid>
             </DataTemplate>

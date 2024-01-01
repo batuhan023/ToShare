@@ -16,7 +16,7 @@ public partial class HomePage : ContentPage
 	{
 
 		InitializeComponent();
-        LblUserName.Text = "Hi " + Preferences.Get("username", string.Empty);
+        LblUserName.Text = "Hi " + Preferences.Get("UserName", string.Empty);
         GetCategories();
 		GetPosts();
         string userName= Preferences.Get("UserName", string.Empty);

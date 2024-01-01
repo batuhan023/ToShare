@@ -14,6 +14,7 @@ namespace ToShare.Models
         public string? Name { get; set; }
         public string? Description { get; set; }
         public int? Count { get; set; }
+        public string? Adres { get; set; }
         public string? Image { get; set; }
         public int? ProductId { get; set; }
         public DateTime StartTime { get; set; }

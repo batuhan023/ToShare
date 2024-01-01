@@ -12,7 +12,7 @@ namespace ToShare.Services
 
     public class PostService
     {
-        private const string ApiUrl = "https://192.168.1.179:45455/api/";
+        private const string ApiUrl = "https://192.168.1.180:45455/api/";
 
         private readonly HttpClient _httpClient;
 
@@ -45,6 +45,12 @@ namespace ToShare.Services
             return JsonConvert.DeserializeObject<Post>(response);
         }
 
+
+        public async Task<List<Post>> GetApplied(int userid)
+        {
+            var response = await _httpClient.GetStringAsync($"{ApiUrl}Posts/GetUserAppliedPosts?userId={userid}");
+            return JsonConvert.DeserializeObject<List<Post>>(response);
+        }
 
         public async Task<IActionResult> ApplyPost(int userId, int postId)
         {

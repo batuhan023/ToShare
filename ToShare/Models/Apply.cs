@@ -14,5 +14,6 @@ namespace ToShare.Models
         public DateTime? ApplyTime { get; set; }
         public bool? IsActive { get; set; }
         public bool? IsAproved { get; set; }
+        public Post Post { get; set; }
     }
 }
