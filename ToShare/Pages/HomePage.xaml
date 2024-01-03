@@ -105,22 +105,30 @@
                                         <Image Source="{Binding Image}"
                                                Aspect="Fill"/>
                                     </Frame>
-                                    <HorizontalStackLayout Grid.Row="1"
-                                                           Spacing="10">
-                                        <Frame CornerRadius="30"
-                                               HeightRequest="35"
-                                               BorderColor="#00B0FF"
-                                               WidthRequest="35">
-                                            <Image Aspect="Fill" Source="man.png"
-                                                   HeightRequest="30"
-                                                   WidthRequest="30"
-                                                   />
-                                        </Frame>
-                                        <Label Text="Batuhan Yavuz"
-                                               VerticalOptions="Center"
-                                               FontSize="Subtitle"
-                                               />
-                                    </HorizontalStackLayout>
+                                    <CollectionView x:Name="CvTopUser"
+                                                    Grid.Row="1">
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate>
+                                                <HorizontalStackLayout 
+                                                                       Spacing="10">
+                                                    <Frame CornerRadius="30"
+                                                           HeightRequest="35"
+                                                           BorderColor="#00B0FF"
+                                                           WidthRequest="35">                  
+                                                        <Image Aspect="Fill" Source="man.png"
+                                                                HeightRequest="30"
+                                                                WidthRequest="30"
+                                                        />
+                                                    </Frame>
+                                                    <Label Text="Batuhan Yavuz"
+                                                    VerticalOptions="Center"
+                                                    FontSize="Subtitle"
+                                                    />                  
+                                                </HorizontalStackLayout>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+                                   
                                     <Label Grid.Row="2"
                                            FontSize="Subtitle"
                                            Text="{Binding Name}"/>

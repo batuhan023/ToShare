@@ -11,7 +11,7 @@ namespace ToShare.Services
 {
     public class LoginService
     {
-        private const string ApiUrl = "https://192.168.1.180:45455/api/";
+        private const string ApiUrl = "https://192.168.1.114:45455/api/";
 
         private readonly HttpClient _httpClient;
 
@@ -23,6 +23,12 @@ namespace ToShare.Services
             };
 
             _httpClient = new HttpClient(handler);
+        }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            var response = await _httpClient.GetStringAsync($"{ApiUrl}Users/GetUsersByUserId?useremail={email}");
+            return JsonConvert.DeserializeObject<User>(response);
         }
 
 
@@ -46,6 +52,7 @@ namespace ToShare.Services
                     var user = data[0];
                     Preferences.Set("username", user.UserName);
                     Preferences.Set("userid", user.Id);
+                    Preferences.Set("useremail", user.UserEmail);
                     return user;
                   
                 }

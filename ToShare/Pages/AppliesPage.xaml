@@ -10,7 +10,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="0"
-               Text="Saved"
+               Text="Applied"
                HorizontalOptions="Center"
                VerticalOptions="Center"
                FontSize="Large"/>

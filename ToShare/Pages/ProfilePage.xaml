@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToShare.Pages.ProfilePage"
+             Title="ProfilePage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               x:Name="ImgProperty"
+               Source="man.png"
+               Margin="100"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HeightRequest="80"
+               />
+        <VerticalStackLayout Grid.Row="2"
+                             Margin="20">
+            <HorizontalStackLayout Spacing="5" Margin="5">
+                <Label FontSize="Medium"
+                       Text="Name: "/>
+                <Label x:Name="lblName"
+                       FontSize="Medium"
+                       />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="5" Margin="5">
+                <Label FontSize="Medium"
+                       Text="Surname: "/>
+                <Label x:Name="lblSurname"
+                       FontSize="Medium"
+                       />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="5" Margin="5">
+                <Label FontSize="Medium"
+                       Text="Email: "/>
+                <Label x:Name="lblEmail"
+                       FontSize="Medium"
+                       />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="5" Margin="5">
+                <Label FontSize="Medium"
+                       Text="Phone: "/>
+                <Label FontSize="Medium"
+                       x:Name="lblphone"
+                       />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="5" Margin="5">
+                <Label FontSize="Medium"
+                       Text="Incoming: "/>
+                <Label FontSize="Medium"
+                       x:Name="lblincoming"
+                       />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <HorizontalStackLayout Grid.Row="3"
+                            VerticalOptions="EndAndExpand"
+                            HorizontalOptions="Center"
+                            Spacing="30">
+            <Button x:Name="Add_button"
+                    Clicked="Add_button_Clicked"
+                    Text="Add a post"
+                    HeightRequest="70"
+                    WidthRequest="150"
+                    Margin="0,0,0,50"
+                    FontSize="Medium"
+                    CornerRadius="35"
+                    BackgroundColor="#00B0FF"
+            />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

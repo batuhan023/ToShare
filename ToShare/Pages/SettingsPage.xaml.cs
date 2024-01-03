@@ -14,6 +14,6 @@ public partial class SettingsPage : ContentPage
 
     private void TapProfile_Tapped(object sender, EventArgs e)
     {
-
+        Navigation.PushModalAsync(new ProfilePage());
     }
 }

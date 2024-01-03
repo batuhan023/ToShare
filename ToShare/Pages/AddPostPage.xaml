@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToShare.Pages.AddPostPage"
+             Title="AddPostPage">
+
+    <VerticalStackLayout VerticalOptions="Center"
+                 Margin="40,0"
+                 Spacing="0">
+
+        <Frame CornerRadius="10"
+           HasShadow="True"
+           Padding="3"
+           Margin="0,3"
+           HeightRequest="50">
+            <Entry x:Name="Name"
+               Placeholder="Name"
+               PlaceholderColor="Black"
+               VerticalOptions="Center"
+               TextColor="Black"
+               FontSize="12"/>
+        </Frame>
+        <Frame CornerRadius="10"
+               HasShadow="True"
+               Padding="3"
+               Margin="0,3"
+               HeightRequest="50">
+            <Entry x:Name="Adress"
+                   Placeholder="Adress"
+                   PlaceholderColor="Black"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   FontSize="12"/>
+        </Frame>
+        <Frame CornerRadius="10"
+               HasShadow="True"
+               Padding="3"
+               Margin="0,3"
+               HeightRequest="50">
+            <Entry x:Name="Count"
+                   Placeholder="Count"
+                   PlaceholderColor="Black"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   FontSize="12"/>
+        </Frame>
+        <Frame CornerRadius="10"
+           HasShadow="True"
+           Padding="3"
+           Margin="0,3"
+               WidthRequest="310"
+           HeightRequest="120">
+            <Editor x:Name="Description"
+               Placeholder="Description"
+               HeightRequest="120"
+               WidthRequest="310"
+               PlaceholderColor="Black"
+               VerticalOptions="Center"
+               TextColor="Black"
+               FontSize="12"/>
+        </Frame>
+        <Frame CornerRadius="10"
+               HasShadow="True"
+               Padding="3"
+               Margin="0,3"
+               HeightRequest="50">
+            <Entry x:Name="Image"
+                   Placeholder="ImageUrl"
+                   PlaceholderColor="Black"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   FontSize="12"/>
+        </Frame>
+        <Frame CornerRadius="10"
+       HasShadow="True"
+       Padding="3"
+       Margin="0,3"
+       HeightRequest="50">
+            <HorizontalStackLayout VerticalOptions="Center">
+                <Label Text="Category: "
+                       Margin="0,9"
+                       FontSize="15"/>
+                <Picker x:Name="selectionPicker"
+                        Margin="10,0"
+                        Title="Choose your category"
+                        SelectedItem="{Binding SelectedOption, Mode=TwoWay}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Food</x:String>
+                            <x:String>Clothes</x:String>
+                            <x:String>Cleaning</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame CornerRadius="10"
+               HasShadow="True"
+               Padding="3"
+               Margin="0,3"
+               HeightRequest="50">
+            <HorizontalStackLayout VerticalOptions="Center">
+                <Label Text="End Time:" 
+                       FontSize="15"
+                       Margin="0,8"/>
+                <DatePicker x:Name="datePicker"
+                            FontSize="15"
+                            Margin="50,0"
+                            Date="{Binding SelectedDate}" />
+            </HorizontalStackLayout>
+        </Frame>
+        <Button x:Name="BtnLogin"
+            Text="Add"
+            HeightRequest="50"
+            WidthRequest="120"
+            Margin="0,15,0,5"
+            FontSize="Medium"
+            BackgroundColor="#00B0FF"/>
+
+    </VerticalStackLayout>
+</ContentPage>
