@@ -99,7 +99,8 @@
                Padding="3"
                Margin="0,3"
                HeightRequest="50">
-            <HorizontalStackLayout VerticalOptions="Center">
+            <HorizontalStackLayout VerticalOptions="Center"
+                                   BindingContext="{Binding DateViewModel}">
                 <Label Text="End Time:" 
                        FontSize="15"
                        Margin="0,8"/>
@@ -115,6 +116,7 @@
             WidthRequest="120"
             Margin="0,15,0,5"
             FontSize="Medium"
+                Clicked="BtnLogin_Clicked"
             BackgroundColor="#00B0FF"/>
 
     </VerticalStackLayout>

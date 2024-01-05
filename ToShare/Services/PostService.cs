@@ -3,16 +3,19 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using ToShare.Models;
+
 
 namespace ToShare.Services
 {
 
     public class PostService
     {
-        private const string ApiUrl = "https://192.168.1.114:45455/api/";
+        private const string ApiUrl = "https://192.168.1.123:45455/api/";
 
         private readonly HttpClient _httpClient;
 
@@ -44,6 +47,41 @@ namespace ToShare.Services
             var response = await _httpClient.GetStringAsync($"{ApiUrl}Posts/GetPostsByPostId?postId={id}");
             return JsonConvert.DeserializeObject<Post>(response);
         }
+
+
+        public async Task<Post> AddPost(int userid, int categorid, string name,
+            string adres, int count, string description, string image, DateTime endtime)
+        {
+            var response = await _httpClient.PostAsync($"{ApiUrl}Posts/AddNewPost?userId={userid}&categoryId={categorid}" +
+                $"&name={name}&adress={adres}&count={count}&description={description}&image={image}&endtime={endtime}",null);
+
+            var responseData = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<Post>(responseData);
+        }
+
+        //public async Task<Post> AddPost(int userid, int categorid, string name,
+        //    string adres, int count, string description, string image, DateTime endtime)
+        //{
+        //    var postData = new
+        //    {
+        //        userId = userid,
+        //        categoryId = categorid,
+        //        name,
+        //        adres,
+        //        count,
+        //        description,
+        //        image,
+        //        endtime
+        //    };
+
+        //    var response = await _httpClient.PostAsJsonAsync($"{ApiUrl}Posts/AddNewPost", postData);
+
+        //    response.EnsureSuccessStatusCode(); // HTTP hata durumlarını kontrol et
+
+        //    var responseData = await response.Content.ReadAsStringAsync();
+        //    return JsonConvert.DeserializeObject<Post>(responseData);
+        //}
+
 
 
         public async Task<List<Post>> GetApplied(int userid)
