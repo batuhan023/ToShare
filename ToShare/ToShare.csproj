@@ -59,6 +59,7 @@
 	  <None Remove="Resources\Images\logout.png" />
 	  <None Remove="Resources\Images\man.png" />
 	  <None Remove="Resources\Images\padlock.png" />
+	  <None Remove="Resources\Images\quality.png" />
 	  <None Remove="Resources\Images\question.png" />
 	  <None Remove="Resources\Images\search.png" />
 	  <None Remove="Resources\Images\setting.gif" />
@@ -88,6 +89,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\AppliesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ApprovedPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\CategoryPage.xaml">

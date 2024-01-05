@@ -13,5 +13,6 @@
         </x:Arguments>
     </NavigationPage>
     <local:AppliesPage Title="Applies" IconImageSource="apply.png" />
+    <local:ApprovedPage Title="Approved" IconImageSource="quality.png"/>
     <local:SettingsPage Title="Settings" IconImageSource="setting2.png"/>
 </TabbedPage>

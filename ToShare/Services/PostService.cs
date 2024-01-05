@@ -90,6 +90,12 @@ namespace ToShare.Services
             return JsonConvert.DeserializeObject<List<Post>>(response);
         }
 
+        public async Task<List<Post>> GetApproved(int userid)
+        {
+            var response = await _httpClient.GetStringAsync($"{ApiUrl}Posts/GetUserApprovedPosts?userId={userid}");
+            return JsonConvert.DeserializeObject<List<Post>>(response);
+        }
+
         public async Task<IActionResult> ApplyPost(int userId, int postId)
         {
             try
