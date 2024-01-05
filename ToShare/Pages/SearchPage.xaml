@@ -37,6 +37,7 @@
                     <Label Padding="10"
                            FontSize="Medium"
                            Text="{Binding Name}"/>
+                    
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             
