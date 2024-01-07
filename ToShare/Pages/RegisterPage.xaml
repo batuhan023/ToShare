@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToShare.Pages.RegisterPage" NavigationPage.HasNavigationBar="False">
 
-
+    <ScrollView>
+        
+   
     <VerticalStackLayout Spacing="0"
                          Padding="20,0">
 
@@ -72,6 +74,18 @@
                    HasShadow="True"
                    HeightRequest="50"
                    Margin="0,4">
+                <Entry Placeholder="Password"
+                       x:Name="EntPassword"
+                       PlaceholderColor="Black"
+                       VerticalOptions="Center"
+                       FontSize="13.5"
+                       TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10"
+                   Padding="3"
+                   HasShadow="True"
+                   HeightRequest="50"
+                   Margin="0,4">
                 <Entry Placeholder="Phone Number"
                        x:Name="EntPhone"
                        PlaceholderColor="Black"
@@ -84,8 +98,20 @@
                    HasShadow="True"
                    HeightRequest="50"
                    Margin="0,4">
-                <Entry Placeholder="Password"
-                       x:Name="EntPassword"
+                <Entry Placeholder="Profile Photo"
+                       x:Name="EntProfil"
+                       PlaceholderColor="Black"
+                       VerticalOptions="Center"
+                       FontSize="12"
+                       TextColor="Black"/>
+            </Frame>
+            <Frame CornerRadius="10"
+                   Padding="3"
+                   HasShadow="True"
+                   HeightRequest="50"
+                   Margin="0,4">
+                <Entry Placeholder="Monthly income"
+                       x:Name="EntIncome"
                        PlaceholderColor="Black"
                        VerticalOptions="Center"
                        FontSize="12"
@@ -100,7 +126,7 @@
                     FontSize="Small"
                     BackgroundColor="#00B0FF"
                     Clicked="BtnRegister_Clicked"/>
-            <HorizontalStackLayout HorizontalOptions="Center">
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,0,0,75">
                 <Label Text="Already have an account?"
                        FontSize="16"
                        TextColor="Black"/>
@@ -165,4 +191,5 @@
             </HorizontalStackLayout.GestureRecognizers>
         </HorizontalStackLayout>
     </VerticalStackLayout>-->
+    </ScrollView>
 </ContentPage>

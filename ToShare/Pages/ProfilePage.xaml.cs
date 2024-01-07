@@ -15,11 +15,13 @@ public partial class ProfilePage : ContentPage
     private async void GetProfileDetay(string email)
     {
         var user = await login.GetUserByEmail(email);
+       
         lblName.Text = user.UserName;
         lblSurname.Text = user.UserSurname;
         lblEmail.Text = user.UserEmail;
         lblphone.Text = user.UserPhone;
         lblincoming.Text = user.Salary.ToString();
+        ImgProperty.Source = user.ProfilePhoto;
     }
 
     private void Add_button_Clicked(object sender, EventArgs e)

@@ -13,7 +13,6 @@
         </Grid.RowDefinitions>
         <Image Grid.Row="0"
                x:Name="ImgProperty"
-               Source="man.png"
                Margin="100"
                HorizontalOptions="Center"
                VerticalOptions="Center"
