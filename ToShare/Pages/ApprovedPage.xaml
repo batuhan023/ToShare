@@ -39,7 +39,7 @@
                             </Frame>
                             <StackLayout Grid.Column="1" Padding="15" Spacing="10">
                                 <Label FontSize="Medium"
-                            Text="{Binding Name}"/>
+                                       Text="{Binding Name}"/>
                                 <Label FontSize="Small" Text="{Binding Address}"/>
                             </StackLayout>
                         </Grid>
