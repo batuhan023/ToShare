@@ -26,13 +26,20 @@
                     </Frame>
                     <StackLayout Grid.Column="1"
                                  Padding="15"
-                                 Spacing="10">
+                                 Spacing="3">
                         <Label FontSize="Medium"
                                Text="{Binding Name}"/>
                         <Label FontSize="Small"
-                               Margin="0,15,0,0"
+                               Margin="0,0,0,0"
                                Text="{Binding Adres}"/>
-                        
+                        <HorizontalStackLayout>
+                            <Label Grid.Row="4"
+                                   FontSize="13"
+                                   Text="Count: "/>
+                            <Label Grid.Row="4"
+                                   FontSize="13"
+                                   Text="{Binding Count}"/>
+                        </HorizontalStackLayout>
                     </StackLayout>
                 </Grid>
             </DataTemplate>

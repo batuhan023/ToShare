@@ -15,10 +15,10 @@
             VerticalOptions="Center"
             FontSize="Large"/>
             <CollectionView x:Name="CvProperties"
-                 Margin="10"
-                     Grid.Row="1"
-                 SelectionMode="Single"
-                 >
+                            Margin="10"
+                            Grid.Row="1"
+                            SelectionMode="Single"
+                            SelectionChanged="CvProperties_SelectionChanged">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="20" Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>

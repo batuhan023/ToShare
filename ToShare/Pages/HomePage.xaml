@@ -94,7 +94,6 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <Frame Grid.Row="0"
                                            HeightRequest="200"
@@ -105,30 +104,7 @@
                                         <Image Source="{Binding Image}"
                                                Aspect="Fill"/>
                                     </Frame>
-                                    <CollectionView x:Name="CvTopUser"
-                                                    Grid.Row="1">
-                                        <CollectionView.ItemTemplate>
-                                            <DataTemplate>
-                                                <HorizontalStackLayout 
-                                                                       Spacing="10">
-                                                    <Frame CornerRadius="30"
-                                                           HeightRequest="35"
-                                                           BorderColor="#00B0FF"
-                                                           WidthRequest="35">                  
-                                                        <Image Aspect="Fill" Source="man.png"
-                                                                HeightRequest="30"
-                                                                WidthRequest="30"
-                                                        />
-                                                    </Frame>
-                                                    <Label Text="Batuhan Yavuz"
-                                                    VerticalOptions="Center"
-                                                    FontSize="Subtitle"
-                                                    />                  
-                                                </HorizontalStackLayout>
-                                            </DataTemplate>
-                                        </CollectionView.ItemTemplate>
-                                    </CollectionView>
-                                   
+
                                     <Label Grid.Row="2"
                                            FontSize="Subtitle"
                                            Text="{Binding Name}"/>
@@ -136,7 +112,7 @@
                                            FontSize="13"
                                            WidthRequest="250"
                                            LineBreakMode="TailTruncation"
-                                           Text="{Binding Description} "/>
+                                           Text="{Binding Adres} "/>
                                     <HorizontalStackLayout Grid.Row="4">
                                         <Label Grid.Row="4"
                                                FontSize="13"

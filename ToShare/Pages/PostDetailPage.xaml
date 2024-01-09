@@ -22,7 +22,7 @@
                      Grid.Row="1"
                      Margin="20,0,20,0">
             <ImageButton x:Name="ImgbackBtn"
-                         Source="backbutton.png"
+                         Source="back.png"
                          Clicked="ImgbackBtn_Clicked"
                          CornerRadius="10"
                          BackgroundColor="White"
@@ -44,40 +44,74 @@
         </StackLayout>
         <VerticalStackLayout Grid.Row="3"
                              Margin="20">
-            <Label x:Name="lblCount"
-                   FontSize="Subtitle"
-                   />
-            <HorizontalStackLayout Spacing="5">
-                <Label x:Name="lblName"
-                       FontSize="Medium"
-                       Text="Pasta"/>
+            <HorizontalStackLayout>
+                <Image x:Name="ImgUser"
+                       HeightRequest="70"
+                       WidthRequest="70"/>
+                <VerticalStackLayout VerticalOptions="Center">
+                    <HorizontalStackLayout>
+                        <Label x:Name="lblUsername"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               Margin="10,0,5,0"/>
+                        <Label x:Name="lblUsersurname"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               Margin="0"/>
+                    </HorizontalStackLayout>
+                    <Label x:Name="userphone"
+                           FontSize="Small"
+                           Margin="10,0,0,0"
+                           Text="05441195622"/>
+                </VerticalStackLayout>
+               
             </HorizontalStackLayout>
-            <Label Text="Description"
-                   Margin="0,20,0,10"
-                   FontSize="Title"/>
-            <Label x:Name="LblDescription"
-                   FontSize="Medium"
-                   />
+            <HorizontalStackLayout Spacing="5"
+                                   Margin="0,20,0,0">
+                <Label x:Name="lblName"
+                       FontSize="Title"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="0,10,0,0">
+                <Label 
+                        FontSize="Medium"
+                        Text="Adress: "/>
+                <Label x:Name="lblbadres"
+                       FontSize="Medium"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="0,5,0,0">
+                <Label 
+                        FontSize="Medium"
+                        Text="Count: "/>
+                <Label x:Name="lblCount"
+                       FontSize="Medium"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="0,5,0,0">
+                <Label Text="Description:"
+                       Margin="0,0,5,0"
+                       FontSize="Medium"/>
+                <Label x:Name="LblDescription"
+                       WidthRequest="250"
+                       VerticalOptions="Center"
+                       />  
+            </HorizontalStackLayout>
         </VerticalStackLayout>
         <HorizontalStackLayout Grid.Row="4"
                                VerticalOptions="EndAndExpand"
                                HorizontalOptions="Center"
                                Spacing="30">
             <Frame HeightRequest="70"
-                   WidthRequest="150"
-                   CornerRadius="35"
-                   Margin="0,0,0,20"
+                   WidthRequest="125"
+                   CornerRadius="30"
+                   Margin="0,0,0,70"
                    BackgroundColor="#00B0FF">
-                <HorizontalStackLayout Spacing="10">
-                    <Button x:Name="Apply_button"
+                <Button x:Name="Apply_button"
                             Text="Apply"
                             HeightRequest="50"
-                            WidthRequest="180"
-                            Margin="0,15,0,5"
+                            WidthRequest="125"
+                            Margin="0"
                             FontSize="Medium"
                             BackgroundColor="#00B0FF"
                             Clicked="Apply_button_Clicked"/>
-                </HorizontalStackLayout>
             </Frame>
             
         </HorizontalStackLayout>

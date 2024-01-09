@@ -40,7 +40,7 @@
                             <StackLayout Grid.Column="1" Padding="15" Spacing="10">
                                 <Label FontSize="Medium"
                                Text="{Binding Name}"/>
-                                <Label FontSize="Small" Text="{Binding Address}"/>
+                                <Label FontSize="Small" Text="{Binding Adres}"/>
                                 <HorizontalStackLayout>
                                     <Label 
                                           FontSize="Subtitle"

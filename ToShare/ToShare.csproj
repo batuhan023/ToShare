@@ -51,6 +51,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\about.png" />
 	  <None Remove="Resources\Images\apply.png" />
+	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\backbutton.png" />
 	  <None Remove="Resources\Images\categories.png" />
 	  <None Remove="Resources\Images\hello.png" />
@@ -92,6 +93,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ApprovedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ApprovedPostDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\CategoryPage.xaml">
