@@ -11,15 +11,22 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
-        <Image Grid.Row="0"
-               x:Name="ImgProperty"
-               Margin="100"
-               HorizontalOptions="Center"
+        <Frame Grid.Row="0"
+               CornerRadius="200"
+               WidthRequest="140"
+               HeightRequest="140"
                VerticalOptions="Center"
-               HeightRequest="80"
+               HorizontalOptions="Center"
+               Margin="90">
+            <Image
+               x:Name="ImgProperty"
+                Aspect="AspectFill"
+                HeightRequest="140"
+                WidthRequest="140"
                />
+        </Frame>
         <VerticalStackLayout Grid.Row="2"
-                             Margin="20">
+                             Margin="20,5">
             <HorizontalStackLayout Spacing="5" Margin="5">
                 <Label FontSize="Medium"
                        Text="Name: "/>

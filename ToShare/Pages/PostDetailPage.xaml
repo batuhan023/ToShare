@@ -45,9 +45,15 @@
         <VerticalStackLayout Grid.Row="3"
                              Margin="20">
             <HorizontalStackLayout>
-                <Image x:Name="ImgUser"
-                       HeightRequest="70"
-                       WidthRequest="70"/>
+                <Frame CornerRadius="200"
+                       HeightRequest="75"
+                       WidthRequest="75"
+                       Margin="0,10,0,0">
+                    <Image x:Name="ImgUser"
+                       HeightRequest="75"
+                           Aspect="AspectFill"
+                       WidthRequest="75"/>
+                </Frame>
                 <VerticalStackLayout VerticalOptions="Center">
                     <HorizontalStackLayout>
                         <Label x:Name="lblUsername"

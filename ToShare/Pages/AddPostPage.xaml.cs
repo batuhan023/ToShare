@@ -25,9 +25,16 @@ public partial class AddPostPage : ContentPage
         {
             categoryýd = 2;
         }
-        else
+        else if (category == "Scholl Stuff") 
         {
             categoryýd = 3;
+        } else if(category == "Cleaning")
+        {
+            categoryýd = 4;
+        }
+        else
+        {
+            categoryýd= 5;
         }
 
         int count = int.Parse(Count.Text);	
@@ -41,6 +48,6 @@ public partial class AddPostPage : ContentPage
         {
             await DisplayAlert("Error", "Oops something went wrong", "Cancel");
         }
-        await Navigation.PushModalAsync(new AddPostPage());
+        await Navigation.PushModalAsync(new ProfilePage());
     }
 }

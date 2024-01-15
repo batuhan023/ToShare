@@ -53,23 +53,41 @@
 	  <None Remove="Resources\Images\apply.png" />
 	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\backbutton.png" />
+	  <None Remove="Resources\Images\batu.png" />
+	  <None Remove="Resources\Images\bora.png" />
+	  <None Remove="Resources\Images\canta.png" />
 	  <None Remove="Resources\Images\categories.png" />
+	  <None Remove="Resources\Images\cbu.png" />
+	  <None Remove="Resources\Images\defter.png" />
+	  <None Remove="Resources\Images\deterjan.png" />
+	  <None Remove="Resources\Images\eda.png" />
+	  <None Remove="Resources\Images\ekmek.png" />
+	  <None Remove="Resources\Images\gitar.png" />
 	  <None Remove="Resources\Images\hello.png" />
 	  <None Remove="Resources\Images\home.gif" />
 	  <None Remove="Resources\Images\home2.png" />
 	  <None Remove="Resources\Images\logout.png" />
 	  <None Remove="Resources\Images\man.png" />
 	  <None Remove="Resources\Images\padlock.png" />
+	  <None Remove="Resources\Images\pant.png" />
+	  <None Remove="Resources\Images\pastane.png" />
+	  <None Remove="Resources\Images\pc.png" />
 	  <None Remove="Resources\Images\quality.png" />
 	  <None Remove="Resources\Images\question.png" />
+	  <None Remove="Resources\Images\sali.png" />
+	  <None Remove="Resources\Images\sampuan.png" />
 	  <None Remove="Resources\Images\search.png" />
 	  <None Remove="Resources\Images\setting.gif" />
 	  <None Remove="Resources\Images\setting2.png" />
 	  <None Remove="Resources\Images\signin.svg" />
 	  <None Remove="Resources\Images\signup.svg" />
+	  <None Remove="Resources\Images\simit.png" />
+	  <None Remove="Resources\Images\temizlik.png" />
 	  <None Remove="Resources\Images\touchscreen.png" />
+	  <None Remove="Resources\Images\tuvalet.png" />
 	  <None Remove="Resources\Images\undraw_sign_up.svg" />
 	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Images\yemekhane.png" />
 	</ItemGroup>
 
 	<ItemGroup>

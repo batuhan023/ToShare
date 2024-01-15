@@ -88,7 +88,9 @@
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Food</x:String>
                             <x:String>Clothes</x:String>
+                            <x:String>Scholl Stuff</x:String>
                             <x:String>Cleaning</x:String>
+                            <x:String>Other</x:String>
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
